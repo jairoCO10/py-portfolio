@@ -1,0 +1,14 @@
+version: '3'
+networks:
+  net-fasthtml:
+services:
+  fasthtml:
+    container_name: "fasthtml"
+    build: .
+    ports:
+      - "7001:80"
+    volumes:
+      - .:/usr/src/app
+
+    networks:
+      - net-fasthtml
